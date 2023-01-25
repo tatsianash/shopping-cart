@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatCurrency } from '../utilities/formatCurrency';
 
 interface IProps {
   id: number;
@@ -15,9 +16,9 @@ export default function StoreItem({ id, name, price, imgUrl }: IProps) {
         className="w-full object-cover overflow-hidden h-52"
       />
       <div className="flex flex-col p-4">
-        <div className="container flex justify-between">
-          <div>{name}</div>
-          <div>${price}</div>
+        <div className="container flex justify-between ">
+          <div className="text-lg font-medium">{name}</div>
+          <div className="ml-2 text-gray-700">{formatCurrency(price)}</div>
         </div>
         <div> add to cart</div>
       </div>
