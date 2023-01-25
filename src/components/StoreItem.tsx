@@ -8,6 +8,7 @@ interface IProps {
   imgUrl: string;
 }
 export default function StoreItem({ id, name, price, imgUrl }: IProps) {
+  const quantity: number = 0;
   return (
     <div className="max-w-sm rounded-md shadow-xl">
       <img
@@ -20,7 +21,30 @@ export default function StoreItem({ id, name, price, imgUrl }: IProps) {
           <div className="text-lg font-medium">{name}</div>
           <div className="ml-2 text-gray-700">{formatCurrency(price)}</div>
         </div>
-        <div> add to cart</div>
+        <div className="max-w-full  mt-5">
+          {quantity === 0 ? (
+            <button className="bg-emerald-600 text-white font-medium rounded-sm px-2 py-1 w-full">
+              + Add To Cart
+            </button>
+          ) : (
+            <div className="flex flex-col items-center">
+              <div className="flex  justify-items-center">
+                <button className="bg-emerald-600 text-white font-medium rounded-sm px-3 py-1 w-fit">
+                  -
+                </button>
+                <div className="mx-3 mt-1">
+                  <span className="text-lg">{quantity}</span> in cart
+                </div>
+                <button className="bg-emerald-600 text-white font-medium rounded-sm px-3 py-1 w-fit">
+                  +
+                </button>
+              </div>
+              <button className="bg-amber-700 text-white font-medium rounded-sm px-2 py-1 w-fit mt-4">
+                Remove
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

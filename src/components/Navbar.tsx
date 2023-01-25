@@ -3,7 +3,7 @@ import { Navbar as NavbarMU, Typography } from '@material-tailwind/react';
 
 export default function Navbar() {
   return (
-    <NavbarMU className="bg-emerald-200 shadow-lg mb-3 py-2 sticky top-0">
+    <NavbarMU className="bg-emerald-300 shadow-lg mb-3 py-2 sticky top-0">
       <div className="container mx-auto flex justify-between">
         <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
           <Typography
