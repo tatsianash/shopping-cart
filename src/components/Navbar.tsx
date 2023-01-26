@@ -39,7 +39,11 @@ export default function Navbar() {
         {cartQuantity > 0 && (
           <button
             onClick={openCart}
-            className="p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded-full inline-flex items-center relative">
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+            className="transition duration-150 ease-in-out mr-1.5 p-2 bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold rounded-full inline-flex items-center relative">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
