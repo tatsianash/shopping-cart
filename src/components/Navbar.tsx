@@ -5,14 +5,14 @@ import { useShoppingCart } from '../context/ShoppingCartContext';
 export default function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <NavbarMU className="bg-emerald-300 shadow-lg mb-3 py-4  h-20 sticky top-0">
-      <div className="container mx-auto flex justify-between">
+    <NavbarMU className="bg-emerald-400 shadow-lg mb-3 py-4  h-20 sticky top-0">
+      <div className="container mx-auto flex justify-between ">
         <ul className="mb-4 mt-4 pt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
           <Typography
             as="li"
             variant="small"
             color="blue-gray"
-            className="p-1 font-normal">
+            className="p-1 font-semibold ">
             <a href="/" className="flex items-center hover:text-gray-500">
               Home
             </a>
@@ -21,7 +21,7 @@ export default function Navbar() {
             as="li"
             variant="small"
             color="blue-gray"
-            className="p-1 font-normal">
+            className="p-1 font-semibold">
             <a href="/store" className="flex items-center hover:text-gray-500">
               Store
             </a>
@@ -30,7 +30,7 @@ export default function Navbar() {
             as="li"
             variant="small"
             color="blue-gray"
-            className="p-1 font-normal">
+            className="p-1 font-semibold">
             <a href="/about" className="flex items-center hover:text-gray-500">
               About
             </a>
