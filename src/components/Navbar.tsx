@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar as NavbarMU, Typography } from '@material-tailwind/react';
+import { Typography } from '@material-tailwind/react';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 
 export default function Navbar() {
