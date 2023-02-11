@@ -1,6 +1,6 @@
 import React from 'react';
 import { useShoppingCart } from '../context/ShoppingCartContext';
-import storeItems from '../data/items.json';
+import * as storeItems from '../data/items.json';
 import { formatCurrency } from '../utilities/formatCurrency';
 
 type CartItemProps = {
@@ -29,17 +29,21 @@ export default function CartItem({ id, quantity }: CartItemProps) {
           className="h-20 w-32 object-cover overflow-hidden"
         />
         <div>
-          <div>
+          <div data-testid="name">
             {name}
-            <span className="font-light text-gray-500 text-sm">
+            <span
+              data-testid="quantity"
+              className="font-light text-gray-500 text-sm">
               &nbsp;&times;{quantity}
             </span>
           </div>
-          <span className="font-light text-gray-500 text-sm">
+          <span
+            data-testid="price"
+            className="font-light text-gray-500 text-sm">
             {formatCurrency(price)}
           </span>
         </div>
-        <div className="justify-self-end">
+        <div data-testid="amount" className="justify-self-end">
           {formatCurrency(itemTotal)}
           <button
             onClick={() => removeFromCart(id)}
