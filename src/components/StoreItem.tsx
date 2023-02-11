@@ -17,8 +17,6 @@ export default function StoreItem({ id, name, price, imgUrl }: IProps) {
   } = useShoppingCart();
   const quantity = getItemQuantity(id);
 
-  console.log({ id, quantity });
-
   return (
     <div className="max-w-sm rounded-md shadow-xl">
       <img
